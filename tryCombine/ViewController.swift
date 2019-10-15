@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import Combine
+import PureLayout
 
 class ViewController: UIViewController {
+    private let barButton: UIBarButtonItem = {
+        let button = UIBarButtonItem()
+        let largeConfig = UIImage.SymbolConfiguration(weight: .bold)
+        let systemImage = UIImage(
+            systemName: "chevron.right",
+            withConfiguration: largeConfig
+        )
+
+        button.image = systemImage
+        button.tintColor = .gray
+
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        self.navigationItem.rightBarButtonItem = self.barButton
+
     }
 
 
