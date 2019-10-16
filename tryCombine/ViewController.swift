@@ -1,38 +1,16 @@
-//
-//  ViewController.swift
-//  tryCombine
-//
-//  Created by Dawid Ramone on 15/10/2019.
-//  Copyright © 2019 Dawid Ramone. All rights reserved.
-//
-
 import UIKit
 import Combine
 import PureLayout
 
 class ViewController: UIViewController {
-    @Published private var buttonSwitchValue: Bool = false
+    @Published private var switchValuePublished: Bool = false
     private var switchSubscriber: AnyCancellable?
 
-    private let barButton: UIBarButtonItem = {
-        let button = UIBarButtonItem()
-        let largeConfig = UIImage.SymbolConfiguration(weight: .bold)
-        let systemImage = UIImage(
-            systemName: "chevron.right",
-            withConfiguration: largeConfig
-        )
-
-        button.image = systemImage
-        button.tintColor = .black
-        button.isEnabled = false
-
-        return button
-    }()
-
+    private let barButton = BarButtonItem()
     private let switchButon: UISwitch = UISwitch()
     private let switchMeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Enabled next button"
+        label.text = Constants.Gen.enabledNextButton.rawValue
 
         return label
     }()
@@ -62,19 +40,12 @@ class ViewController: UIViewController {
     @objc fileprivate func switchStateDidChange(_ sender: UISwitch) {
         let switchValue = sender.isOn
         DispatchQueue.global().async {
-            self.buttonSwitchValue = switchValue
+            self.switchValuePublished = switchValue
         }
     }
 
     fileprivate func bind() {
-        /* init @Published in two ways
-         self.switchSubscriber = self.$buttonSwitchValue.sink { [weak self] isEnabled in
-            DispatchQueue.main.async {
-                self.barButton.isEnabled = isEnabled
-            }
-         }
-        */
-        self.switchSubscriber = self.$buttonSwitchValue
+        self.switchSubscriber = self.$switchValuePublished
             .receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: barButton)
     }
