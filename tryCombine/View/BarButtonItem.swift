@@ -18,7 +18,7 @@ class BarButtonItem: UIBarButtonItem {
     }
 
     fileprivate func setup() {
-        self.image = systemImage
+        self.image = self.systemImage
         self.tintColor = .black
         self.isEnabled = false
     }

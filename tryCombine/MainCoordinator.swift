@@ -9,7 +9,7 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = ViewController()
-        navigationController.pushViewController(vc, animated: false)
+        let viewController = ViewController()
+        self.navigationController.pushViewController(viewController, animated: false)
     }
 }
