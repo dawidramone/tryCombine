@@ -12,7 +12,9 @@
 		921C11D9235534D200763A2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C11D8235534D200763A2F /* ViewController.swift */; };
 		921C11DE235534DA00763A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921C11DD235534DA00763A2F /* Assets.xcassets */; };
 		921C11E1235534DA00763A2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921C11DF235534DA00763A2F /* LaunchScreen.storyboard */; };
-		923F924A2357A290003F8934 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F92492357A290003F8934 /* CustomButtons.swift */; };
+		923F924A2357A290003F8934 /* BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F92492357A290003F8934 /* BarButtonItem.swift */; };
+		923F924C2357C794003F8934 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F924B2357C794003F8934 /* Coordinator.swift */; };
+		923F924E2357C84F003F8934 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F924D2357C84F003F8934 /* MainCoordinator.swift */; };
 		9271FE3B2355464600DC04A6 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9271FE3A2355464600DC04A6 /* PureLayout.framework */; };
 		9271FE3C2355464600DC04A6 /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9271FE3A2355464600DC04A6 /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B95BC923579ED400BA5EF5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B95BC823579ED400BA5EF5 /* Constants.swift */; };
@@ -41,7 +43,9 @@
 		921C11DD235534DA00763A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		921C11E0235534DA00763A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		921C11E2235534DA00763A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		923F92492357A290003F8934 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		923F92492357A290003F8934 /* BarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItem.swift; sourceTree = "<group>"; };
+		923F924B2357C794003F8934 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		923F924D2357C84F003F8934 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9271FE3A2355464600DC04A6 /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
 		92B95BC823579ED400BA5EF5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C8DACF9D2357783500A41B23 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				C8DACF9D2357783500A41B23 /* SecondViewController.swift */,
 				921C11D6235534D200763A2F /* SceneDelegate.swift */,
 				921C11D8235534D200763A2F /* ViewController.swift */,
+				923F924B2357C794003F8934 /* Coordinator.swift */,
+				923F924D2357C84F003F8934 /* MainCoordinator.swift */,
 				923F92482357A26B003F8934 /* View */,
 				92B95BCA2357A0D600BA5EF5 /* Support Files */,
 				921C11DD235534DA00763A2F /* Assets.xcassets */,
@@ -95,7 +101,7 @@
 		923F92482357A26B003F8934 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				923F92492357A290003F8934 /* CustomButtons.swift */,
+				923F92492357A290003F8934 /* BarButtonItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,11 +194,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B95BC923579ED400BA5EF5 /* Constants.swift in Sources */,
+				923F924E2357C84F003F8934 /* MainCoordinator.swift in Sources */,
 				C8DACF9E2357783600A41B23 /* SecondViewController.swift in Sources */,
 				921C11D9235534D200763A2F /* ViewController.swift in Sources */,
 				921C11D5235534D200763A2F /* AppDelegate.swift in Sources */,
-				923F924A2357A290003F8934 /* CustomButtons.swift in Sources */,
+				923F924A2357A290003F8934 /* BarButtonItem.swift in Sources */,
 				921C11D7235534D200763A2F /* SceneDelegate.swift in Sources */,
+				923F924C2357C794003F8934 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

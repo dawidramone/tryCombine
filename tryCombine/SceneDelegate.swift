@@ -2,6 +2,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    var coordinator: MainCoordinator?
     var window: UIWindow?
 
 
@@ -12,8 +13,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
 
         self.window?.windowScene = windowScene
-        let viewController = ViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = UINavigationController()
+        self.coordinator = MainCoordinator(navigationController: navigationController)
+        self.coordinator?.start()
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }

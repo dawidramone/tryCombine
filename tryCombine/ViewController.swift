@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     fileprivate func bind() {
         self.switchSubscriber = self.$switchValuePublished
             .receive(on: RunLoop.main)
-            .assign(to: \.isEnabled, on: barButton)
+            .assign(to: \.isEnabled, on: self.barButton)
     }
 
     @objc fileprivate func pushSecondViewController(_ sender: UIBarButtonItem) { //TODO: add coordinator for handle navigate
