@@ -14,6 +14,7 @@
 		921C11E1235534DA00763A2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921C11DF235534DA00763A2F /* LaunchScreen.storyboard */; };
 		9271FE3B2355464600DC04A6 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9271FE3A2355464600DC04A6 /* PureLayout.framework */; };
 		9271FE3C2355464600DC04A6 /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9271FE3A2355464600DC04A6 /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C8DACF9E2357783600A41B23 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DACF9D2357783500A41B23 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		921C11E0235534DA00763A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		921C11E2235534DA00763A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9271FE3A2355464600DC04A6 /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
+		C8DACF9D2357783500A41B23 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				921C11D4235534D200763A2F /* AppDelegate.swift */,
 				921C11D6235534D200763A2F /* SceneDelegate.swift */,
 				921C11D8235534D200763A2F /* ViewController.swift */,
+				C8DACF9D2357783500A41B23 /* SecondViewController.swift */,
 				921C11DD235534DA00763A2F /* Assets.xcassets */,
 				921C11DF235534DA00763A2F /* LaunchScreen.storyboard */,
 				921C11E2235534DA00763A2F /* Info.plist */,
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DACF9E2357783600A41B23 /* SecondViewController.swift in Sources */,
 				921C11D9235534D200763A2F /* ViewController.swift in Sources */,
 				921C11D5235534D200763A2F /* AppDelegate.swift in Sources */,
 				921C11D7235534D200763A2F /* SceneDelegate.swift in Sources */,

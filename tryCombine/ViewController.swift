@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.navigationItem.rightBarButtonItem = self.barButton
-        switchButon.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
+        self.addTargets()
         self.addSubviews()
         self.addConstraints()
         self.bind()
@@ -77,6 +77,17 @@ class ViewController: UIViewController {
         self.switchSubscriber = self.$buttonSwitchValue
             .receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: barButton)
+    }
+
+    @objc fileprivate func pushSecondViewController(_ sender: UIBarButtonItem) { //TODO: add coordinator for handle navigate
+        let secondViewController = SecondViewController()
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
+
+    fileprivate func addTargets() {
+        switchButon.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
+        self.barButton.target = self
+        self.barButton.action = #selector(self.pushSecondViewController(_:))
     }
 }
 
