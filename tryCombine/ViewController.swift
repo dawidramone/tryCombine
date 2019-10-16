@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     }
 
     fileprivate func addTargets() {
-        switchButon.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
+        self.switchButon.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
         self.barButton.target = self
         self.barButton.action = #selector(self.pushSecondViewController(_:))
     }
