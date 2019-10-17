@@ -4,6 +4,7 @@ import PureLayout
 
 class FirstViewController: UIViewController {
     @Published private var switchValuePublished: Bool = false
+
     private var switchSubscriber: AnyCancellable?
 
     var coordinator: MainCoordinator?
@@ -52,14 +53,14 @@ class FirstViewController: UIViewController {
             .assign(to: \.isEnabled, on: self.barButton)
     }
 
-    @objc fileprivate func pushSecondViewController(_ sender: UIBarButtonItem) { //TODO: add coordinator for handle navigate
+    @objc fileprivate func pushSecondViewController() {
         self.coordinator?.navigateToSecondViewController()
     }
 
     fileprivate func addTargets() {
         self.switchButon.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
         self.barButton.target = self
-        self.barButton.action = #selector(self.pushSecondViewController(_:))
+        self.barButton.action = #selector(self.pushSecondViewController)
     }
 }
 

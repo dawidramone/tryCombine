@@ -7,9 +7,4 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .red
     }
-
-    deinit {
-        print("Second VC deinit")
-    }
-
 }
