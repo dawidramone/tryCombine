@@ -2,9 +2,11 @@ import UIKit
 import Combine
 import PureLayout
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
     @Published private var switchValuePublished: Bool = false
     private var switchSubscriber: AnyCancellable?
+
+    var coordinator: MainCoordinator?
 
     private let barButton = BarButtonItem()
     private let switchButon: UISwitch = UISwitch()
@@ -51,8 +53,7 @@ class ViewController: UIViewController {
     }
 
     @objc fileprivate func pushSecondViewController(_ sender: UIBarButtonItem) { //TODO: add coordinator for handle navigate
-        let secondViewController = SecondViewController()
-        self.navigationController?.pushViewController(secondViewController, animated: true)
+        self.coordinator?.navigateToSecondViewController()
     }
 
     fileprivate func addTargets() {

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		921C11D5235534D200763A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C11D4235534D200763A2F /* AppDelegate.swift */; };
 		921C11D7235534D200763A2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C11D6235534D200763A2F /* SceneDelegate.swift */; };
-		921C11D9235534D200763A2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C11D8235534D200763A2F /* ViewController.swift */; };
+		921C11D9235534D200763A2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C11D8235534D200763A2F /* FirstViewController.swift */; };
 		921C11DE235534DA00763A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921C11DD235534DA00763A2F /* Assets.xcassets */; };
 		921C11E1235534DA00763A2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921C11DF235534DA00763A2F /* LaunchScreen.storyboard */; };
 		923F924A2357A290003F8934 /* BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923F92492357A290003F8934 /* BarButtonItem.swift */; };
@@ -39,7 +39,7 @@
 		921C11D1235534D200763A2F /* tryCombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tryCombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		921C11D4235534D200763A2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		921C11D6235534D200763A2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		921C11D8235534D200763A2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		921C11D8235534D200763A2F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		921C11DD235534DA00763A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		921C11E0235534DA00763A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		921C11E2235534DA00763A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,11 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				921C11D4235534D200763A2F /* AppDelegate.swift */,
-				C8DACF9D2357783500A41B23 /* SecondViewController.swift */,
 				921C11D6235534D200763A2F /* SceneDelegate.swift */,
-				921C11D8235534D200763A2F /* ViewController.swift */,
-				923F924B2357C794003F8934 /* Coordinator.swift */,
-				923F924D2357C84F003F8934 /* MainCoordinator.swift */,
+				923F92502357E897003F8934 /* Coordinators */,
+				923F924F2357E873003F8934 /* ViewControllers */,
 				923F92482357A26B003F8934 /* View */,
 				92B95BCA2357A0D600BA5EF5 /* Support Files */,
 				921C11DD235534DA00763A2F /* Assets.xcassets */,
@@ -104,6 +102,24 @@
 				923F92492357A290003F8934 /* BarButtonItem.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		923F924F2357E873003F8934 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				921C11D8235534D200763A2F /* FirstViewController.swift */,
+				C8DACF9D2357783500A41B23 /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		923F92502357E897003F8934 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				923F924D2357C84F003F8934 /* MainCoordinator.swift */,
+				923F924B2357C794003F8934 /* Coordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		9271FE392355464600DC04A6 /* Frameworks */ = {
@@ -196,7 +212,7 @@
 				92B95BC923579ED400BA5EF5 /* Constants.swift in Sources */,
 				923F924E2357C84F003F8934 /* MainCoordinator.swift in Sources */,
 				C8DACF9E2357783600A41B23 /* SecondViewController.swift in Sources */,
-				921C11D9235534D200763A2F /* ViewController.swift in Sources */,
+				921C11D9235534D200763A2F /* FirstViewController.swift in Sources */,
 				921C11D5235534D200763A2F /* AppDelegate.swift in Sources */,
 				923F924A2357A290003F8934 /* BarButtonItem.swift in Sources */,
 				921C11D7235534D200763A2F /* SceneDelegate.swift in Sources */,

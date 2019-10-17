@@ -9,7 +9,14 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let viewController = ViewController()
+        let viewController = FirstViewController()
+        viewController.coordinator = self
         self.navigationController.pushViewController(viewController, animated: false)
+    }
+
+    func navigateToSecondViewController() {
+        let secondViewController = SecondViewController()
+        secondViewController.coordinator = self
+        self.navigationController.pushViewController(secondViewController, animated: true)
     }
 }
