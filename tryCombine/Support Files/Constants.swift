@@ -3,6 +3,8 @@ import Foundation
 enum Constants {
     enum AppIconName: String {
         case chevronRight = "chevron.right"
+        case chevronLeft = "chevron.left"
+
     }
 
     enum Gen: String {
