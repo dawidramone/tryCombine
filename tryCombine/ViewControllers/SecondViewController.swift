@@ -8,6 +8,5 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.navigationItem.leftBarButtonItem = self.barButton
-
     }
 }
